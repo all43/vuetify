@@ -518,7 +518,7 @@ export default mixins(
         getSlot(this, 'footer', data, true),
       ]
 
-      if (!this.hideDefaultFooter) {
+      if (!this.hideDefaultFooter && !this.disablePagination) {
         children.push(this.$createElement(VDataFooter, {
           ...data,
           scopedSlots: getPrefixedScopedSlots('footer.', this.$scopedSlots),
